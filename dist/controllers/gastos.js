@@ -15,10 +15,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteExpense = exports.createExpense = exports.getExpenseByID = exports.getExpenses = void 0;
 const gastos_1 = __importDefault(require("../models/gastos"));
 const getExpenses = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const condicion = {
-        estado: true,
-    };
-    const expenses = yield gastos_1.default.find(condicion);
+    // const condicion = {
+    //   estado: true,
+    // };
+    const expenses = yield gastos_1.default.find();
     res.json({
         msg: "Gastos hechos",
         expenses,

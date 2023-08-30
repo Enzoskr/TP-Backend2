@@ -3,11 +3,11 @@ import { Request, Response } from "express";
 import Expense, { ISExpenses } from "../models/gastos";
 
 export const getExpenses = async (req: Request, res: Response) => {
-  const condicion = {
-    estado: true,
-  };
+  // const condicion = {
+  //   estado: true,
+  // };
 
-  const expenses = await Expense.find(condicion);
+  const expenses = await Expense.find();
 
   res.json({
     msg: "Gastos hechos",
