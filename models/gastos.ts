@@ -6,6 +6,7 @@ export interface ISExpenses {
   description: string;
   amount: number;
   category: string;
+  estado: boolean;
 }
 
 const ExpenseSchema = new Schema<ISExpenses>({
@@ -14,6 +15,7 @@ const ExpenseSchema = new Schema<ISExpenses>({
   description: { type: String, required: true },
   amount: { type: Number, required: true },
   category: { type: String },
+  estado: { type: Boolean, required: true, default: true },
 });
 
 const Expense: Model<ISExpenses> = model<ISExpenses>("Expense", ExpenseSchema);

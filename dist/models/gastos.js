@@ -7,6 +7,7 @@ const ExpenseSchema = new mongoose_1.Schema({
     description: { type: String, required: true },
     amount: { type: Number, required: true },
     category: { type: String },
+    estado: { type: Boolean, required: true, default: true },
 });
 const Expense = (0, mongoose_1.model)("Expense", ExpenseSchema);
 exports.default = Expense;
